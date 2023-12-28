@@ -20,6 +20,5 @@
 
 import Route from '@ioc:Adonis/Core/Route'
 
-Route.get('/', async () => {
-  return { hello: 'world' }
-})
+Route.get('/category', 'CategoriesController.index')
+Route.post('/category', 'CategoriesController.store')
