@@ -12,4 +12,19 @@ export default class CategoriesController {
     const respons = await data.save()
     return respons
   }
+
+  public async update({ params, request }: HttpContextContract) {
+    const categoryId = params.id
+    const data = await Category.findOrFail(categoryId)
+    data.name = request.input('name')
+    const respons = await data.save()
+    return respons
+  }
+
+  public async destroy({ params }: HttpContextContract) {
+    const categoryId = params.id
+    const data = await Category.findOrFail(categoryId)
+    const respons = await data.delete()
+    return respons
+  }
 }

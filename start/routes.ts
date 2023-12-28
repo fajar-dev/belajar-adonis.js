@@ -22,3 +22,10 @@ import Route from '@ioc:Adonis/Core/Route'
 
 Route.get('/category', 'CategoriesController.index')
 Route.post('/category', 'CategoriesController.store')
+Route.put('/category/:id', 'CategoriesController.update')
+Route.delete('/category/:id', 'CategoriesController.destroy')
+
+Route.get('/post', 'PostsController.index')
+Route.post('/post', 'PostsController.store')
+Route.put('/post/:id', 'PostsController.update')
+Route.delete('/post/:id', 'PostsController.destroy')

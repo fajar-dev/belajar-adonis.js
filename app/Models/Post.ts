@@ -7,7 +7,7 @@ export default class Post extends BaseModel {
   public id: number
 
   @column()
-  public category_id: number
+  public categoryId: number
 
   @belongsTo(() => Category)
   public category: BelongsTo<typeof Category>
